@@ -1,0 +1,12 @@
+{
+    "verbs": [
+        {
+            "id": "study",
+            "slots": {
+                "required$add": {
+                    "art_aspect_item": 1
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,550 @@
+{
+    "recipes": [
+        {
+            "id": "ambition",
+            "label": "异质的追求？",
+            "actionId": "craving",
+            "startdescription": "什么样的饥渴在驱使着我们？",
+            "description": "",
+            "warmup": 10,
+            "effects": {},
+            "requirements": {
+              "seasonambitions": "1"
+            },
+            "linked": [
+              {
+                "id": "art_ace_init_hint",
+                "chance": 100
+              },
+              {
+                "id": "ascensionnotyet",
+                "chance": 100
+              }
+            ],
+            "slots": [
+              {
+                "id": "Obsessions",
+                "label": "痴迷之念",
+                "description": "更深层的渴望",
+                "required": {
+                  "art_aspect_mare": 1,
+                  "art_aspect_malachite": 1
+                },
+                "greedy": true
+              }
+            ]
+          },
+        {
+            "id": "art_ace_init_hint",
+            "label": "林地的气息",
+            "actionId": "craving",
+            "requirements": {
+                "desire": 1
+            },
+            "startdescription": "我耐心等待赴约的日子。",
+            "description": "想要走得更近，我需设法安抚徘徊的亡灵。",
+            "effects": {
+                "restlessness": 1
+            },
+            "warmup": 10
+        },
+        {
+            "id": "art_ace_a_hint",
+            "label": "林地的气息",
+            "actionId": "craving",
+            "requirements": {
+                "desire": 2
+            },
+            "startdescription": "我耐心等待赴约的日子。",
+            "description": "我还需要一位旅伴。我可以向环杉在此世的杰作寻求建议。",
+            "effects": {
+                "restlessness": 1
+            },
+            "warmup": 10
+        },
+
+
+        {
+            "id": "art_init_1",
+            "label": "归家",
+            "actionid": "work",
+            "requirements": {
+                "art_init_card": 1
+            },
+            "effects": {
+                "funds": 7,
+                "reason": 1,
+                "art_init_deer": 1,
+                "art_init_card": -1
+            },
+            "startdescription": "这条道路并不算偏僻，然而没有路灯照明。今夜也没有月光。",
+            "description": "某种来自路边树丛的物体——我躲闪不及，车辆因柔软的撞击而停顿，除此之外没有任何声响。四下无人，我下车查看。\n［解锁研究。］",
+            "warmup": 10,
+            "craftable": true,
+            "maxexecutions": 1,
+            "alt": [
+                {
+                    "id": "art_init_study_open",
+                    "additional": true
+                }
+            ]
+        },
+        {
+            "id": "art_init_study_open",
+            "label": "突发奇想",
+            "actionid": "study",
+            "startdescription": "若无意外，它将一直躺在这里，阻碍别的车辆前行。我可以把它拖到路边，或者……",
+            "description": "我将它带回家中，出于某种未知的缘由。“它能为我所用。”这一奇特的设想占据我的脑海。而设想不会伤害任何人，因此我可以付诸实践；我饥肠辘辘，因此值得付诸实践……",
+            "warmup": 30,
+            "craftable": false,
+            "maxexecutions": 1
+        },
+        {
+            "id": "art_init_study_deer",
+            "label": "加工食材",
+            "actionid": "study",
+            "requirements": {
+                "art_init_deer": 1
+            },
+            "effects": {
+                "health": 1,
+                "art_init_deer_remain": 1,
+                "art_init_deer": -1
+            },
+            "startdescription": "我割下它的头颅，剥下躯干的皮，用各种器皿盛满放出的血，直到我不得不将一部分浪费掉，尽管血与水接触会升腾起一层白烟。我在这样的白烟中把肉块扔进锅里炖煮。",
+            "description": "我只放了些盐。肉并不腥，反而柔软温暖，棉花一样堵住我的食道。我也尝了它的血，无味但湿润。也许我可以设法保存剩下的部分。\n［解锁入梦。］",
+            "warmup": 60,
+            "craftable": true,
+            "maxexecutions": 1,
+            "alt": [
+                {
+                    "id": "art_init_dream_open",
+                    "additional": true
+                }
+            ]
+        },
+        {
+            "id": "art_init_dream_open",
+            "label": "荒唐的梦境",
+            "actionid": "dream",
+            "startdescription": "我回到公路，鹿在林中与我对视。汽车从我身上碾过前，它的眼中映出了钴蓝的满月——",
+            "description": "我醒来时大汗淋漓。我说服自己正身处现实，我唯一关注的世界表皮，尽管它肤浅。我有必做之事。\n［时间开始流逝。］",
+            "warmup": 30,
+            "craftable": false,
+            "maxexecutions": 1,
+            "effects": {
+                "passion": 1,
+                "art_init_job": 1
+            },
+            "alt": [
+                {
+                    "id": "drawseason",
+                    "additional": true
+                }
+            ]
+        },
+        {
+            "id": "art_init_job_1",
+            "label": "寻常演出？",
+            "actionid": "work",
+            "startdescription": "这些词句我已唱了千百次。我确信自己的状态比往日更好，得益于某物。或许不止如此。",
+            "description": "演出结束，我和观众们聊天，合影，收到了许多礼物和花束。其中一位——我已不记得容貌或名姓——一直等到其他人全部散去，才与我交谈了许久，再悄无声息地消失。如同影子在夜晚消失。\n[解锁谈话。]",
+            "warmup": 45,
+            "craftable": true,
+            "maxexecutions": 1,
+            "requirements": {
+                "art_init_job": 1
+            },
+            "effects": {
+                "passion": 1,
+                "art_job": 1,
+                "art_init_job": -1
+            },
+            "alt": [
+                {
+                    "id": "art_init_talk_open",
+                    "additional": true
+                }
+            ]
+        },
+        {
+            "id": "art_init_talk_open",
+            "label": "必要的燃料",
+            "actionid": "talk",
+            "startdescription": "我尚还记得谈话的部分片段。这是他（或她？和它？）给我的礼物。",
+            "description": "我将它吞吃，就像角色无法成为我，因而我必将成为角色。只要在台上燃烧，我就能学到一些新的东西。\n[解锁探索。]",
+            "warmup": 60,
+            "craftable": false,
+            "maxexecutions": 1,
+            "slots": [
+                {
+                  "id": "art_init_deer_remain_slot",
+                  "label": "牺牲",
+                  "description": "它可以付出更多。",
+                  "required": {
+                    "art_init_deer_remain": 1
+                  },
+                  "greedy": true
+                }
+              ],
+            "effects": {
+                "art_deer_remain": 1,
+                "art_init_deer_remain": -1
+            },
+            "alt": [
+                {
+                    "id": "art_init_explore_open",
+                    "additional": true
+                }
+            ]
+        },
+        {
+            "id": "art_init_explore_open",
+            "label": "咀嚼思维",
+            "actionid": "explore",
+            "startdescription": "这天傍晚，我让脚步带我随意前行，我只顾注视下一步的位置。",
+            "description": "我将谜团吃尽，然后豁然开朗。但我知道远远不够。",
+            "warmup": 60,
+            "craftable": false,
+            "maxexecutions": 1,
+            "effects": {
+                "locationbookdealer": 1,
+                "art_ace_a_mat": 1
+            }
+        },
+
+        {
+            "id": "art_job_renew",
+            "label": "续约",
+            "actionid": "work",
+            "startdescription": "技巧与灵感都尚未离我而去，我必须展现出这一点。",
+            "description": "无人注意到我的短暂消失。",
+            "warmup": 60,
+            "craftable": true,
+            "maxexecutions": 0,
+            "requirements": {
+                "art_job_decay": 1
+            },
+            "effects": {
+                "art_job": 1,
+                "art_job_decay": -1
+            }
+        },
+
+        {
+            "id": "art_job_work_hint",
+            "label": "演出",
+            "actionid": "work",
+            "startdescription": "我能加入些自己的东西。",
+            "maxexecutions": 0,
+            "requirements": {
+                "art_job": 1,
+                "art_aspect_show": -1,
+                "ability": -1
+            },
+            "hintonly":true
+        },
+        {
+            "id": "art_job_work",
+            "label": "寻常演出",
+            "actionid": "work",
+            "startdescription": "我会演出，仅此而已。",
+            "description": "我的表现中规中矩，也可以说是毫无亮点。",
+            "warmup": 30,
+            "craftable": true,
+            "maxexecutions": 0,
+            "requirements": {
+                "art_job": 1,
+                "ability": 1
+            },
+            "effects": {
+                "funds": 1
+            }
+        },
+        {
+            "id": "art_job_a_mat",
+            "label": "第一幕",
+            "actionid": "work",
+            "aspects": {
+                "job": 1
+            },
+            "startdescription": "我所要说的是，当我咽下它，它仿佛活物。",
+            "description": "我只提供了最些微而拙劣的暗示。这是否足够？",
+            "warmup": 60,
+            "craftable": true,
+            "maxexecutions": 1,
+            "requirements": {
+                "art_job": 1,
+                "art_ace_a_mat": 1
+            },
+            "effects": {
+                "mystique": 1,
+                "art_ace_a_pre": 1,
+                "art_ace_a_mat": -1
+            }
+        },
+        {
+            "id": "art_job_b_mat_hint",
+            "label": "第二幕?",
+            "actionid": "work",
+            "startdescription": "想要完成这一幕，我需要蛾之性相，并闭口不言。",
+            "maxexecutions": 0,
+            "requirements": {
+                "art_ace_b_mat": 1,
+                "art_job": 1
+            },
+            "hintonly":true
+        },
+        {
+            "id": "art_job_b_mat",
+            "label": "第二幕",
+            "actionid": "work",
+            "aspects": {
+                "job": 1
+            },
+            "startdescription": "我所要说的是沉默。",
+            "description": "这天我不发一言，在空旷的舞台徘徊许久。",
+            "warmup": 60,
+            "craftable": true,
+            "maxexecutions": 1,
+            "requirements": {
+                "art_job": 1,
+                "moth": 1,
+                "art_ace_b_mat": 1,
+                "ability": 0
+            },
+            "effects": {
+                "influencewinter":1,
+                "mystique": 1,
+                "art_ace_b_pre": 1,
+                "art_ace_b_mat": -1
+            }
+        },
+        {
+            "id": "art_ace_a_rise",
+            "label": "第一重启迪",
+            "actionid": "dream",
+            "startdescription": "我们的相遇始于某个夜晚。我确信这绝非偶然，因为当我忆起它，当我回味它的血肉，我就能够梦见林地。",
+            "description": "这是个漫长的梦境，我被邀请前去旅行。我紧随鹿的骨架，它嘎吱作响，我为它拾起保管每一块碎骨。我许诺若有可能，我将前去留在它的身边，就像它来到我的身边。也许这不是个明智的承诺。也许这是我的回报。",
+            "warmup": 60,
+            "craftable": true,
+            "maxexecutions": 1,
+            "requirements": {
+                "art_ace_a_pre": 1
+            },
+            "effects": {
+                "art_ace_a_init": 1,
+                "art_ace_a_pre": -1
+            }
+        },
+
+        {
+            "id": "art_ace_a_choose",
+            "label": "我要将启迪用在何处？",
+            "actionid": "dream",
+            "startdescription": "当我入睡前，当我回到路边树丛等待我的向导，我还能尝试一次解答，直至月光使我发狂。\n[你只有一次选择。]",
+            "warmup": 60,
+            "craftable": true,
+            "maxexecutions": 0,
+            "requirements": {
+                "art_ace_a_init": 1
+            },
+            "slots": [
+                {
+                  "id": "art_ace_a_choose_slot",
+                  "label": "我的选择",
+                  "description": "也许无足挂齿。",
+                  "required": {
+                    "passion": 1,
+                    "reason": 1
+                  },
+                  "greedy": false
+                }
+            ],
+            "alt": [
+                {
+                    "id": "art_ace_a_choose_mare",
+                    "additional": false
+                },
+                {
+                    "id": "art_ace_a_choose_malachite",
+                    "additional": false
+                }
+            ]
+        },
+        {
+            "id": "art_ace_a_choose_mare",
+            "label": "我径直赴约",
+            "actionid": "dream",
+            "description": "一切都不会消失，就连火也会留下灰烬。我将灰烬如血肉吞下，我的，和他人的。",
+            "warmup": 60,
+            "craftable": false,
+            "maxexecutions": 1,
+            "requirements": {
+                "art_ace_a_init": 1,
+                "passion": 1
+            },
+            "effects": {
+                "art_ace_a_init": -1,
+                "art_ace_a_mare": 1
+            }
+        },
+        {
+            "id": "art_ace_a_choose_malachite",
+            "label": "我另觅去处",
+            "actionid": "dream",
+            "description": "一切都会消失，但灰烬也曾将我灼伤。火为我烙上印记，疤痕将长成我的新芽。",
+            "warmup": 60,
+            "craftable": false,
+            "maxexecutions": 1,
+            "requirements": {
+                "art_ace_a_init": 1,
+                "reason": 1
+            },
+            "effects": {
+                "art_ace_a_init": -1,
+                "art_ace_a_malachite": 1
+            }
+        },
+
+        {
+            "id": "art_ace_a_dream_hint_mare",
+            "label": "犹疑不前",
+            "actionid": "dream",
+            "startdescription": "我将前往辉光无法触及之地。",
+            "warmup": 60,
+            "craftable": true,
+            "maxexecutions": 0,
+            "requirements": {
+                "art_ace_a_mare": 1
+            },
+            "slots": [
+                {
+                  "id": "art_ace_a_dream_hint_slot",
+                  "label": "我的尝试",
+                  "description": "时有成功，时有失败。",
+                  "required": {
+                    "lore": 1
+                  },
+                  "greedy": false
+                }
+            ],
+            "alt": [
+                {
+                    "id": "art_ace_a_dream_success",
+                    "additional": false,
+                    "chance":100
+                }
+            ]
+        },
+        {
+            "id": "art_ace_a_dream_hint_malachite",
+            "label": "犹疑不前",
+            "actionid": "dream",
+            "startdescription": "我将前往辉光无法触及之地。",
+            "warmup": 60,
+            "craftable": true,
+            "maxexecutions": 0,
+            "requirements": {
+                "art_ace_a_malachite": 1
+            },
+            "slots": [
+                {
+                  "id": "art_ace_a_dream_hint_slot",
+                  "label": "我的尝试",
+                  "description": "时有成功，时有失败。",
+                  "required": {
+                    "lore": 1
+                  },
+                  "greedy": false
+                }
+            ],
+            "alt": [
+                {
+                    "id": "art_ace_a_dream_success",
+                    "additional": false,
+                    "chance":100
+                }
+            ]
+        },
+        {
+            "id": "art_ace_a_dream_success",
+            "startdescription": "我与亡者并肩前行，而后他们离我而去，陷入永久的寂静。",
+            "maxexecutions": 1,
+            "craftable": false,
+            "requirements": {
+                "winter": 4
+            },
+            "effects": {
+                "art_ace_b_mat": 1
+            }
+        },
+        {
+            "id": "art_ace_a_rise_hint",
+            "label": "第二重启迪",
+            "actionid": "dream",
+            "startdescription": "我们的相遇始于某个白日。身为凡人，此人的命运早有定论，可悲的是我们竟曾相识。",
+            "warmup": 60,
+            "craftable": true,
+            "maxexecutions": 0,
+            "requirements": {
+                "art_ace_b_pre": 1
+            },
+            "slots": [
+                {
+                  "id": "art_ace_b_pre_slot",
+                  "label": "我的欲望",
+                  "description": "我可以更进一步。",
+                  "required": {
+                    "desire": 1
+                  },
+                  "greedy": false
+                }
+            ],
+            "alt": [
+                {
+                    "id": "art_ace_a_rise_mare",
+                    "additional": false,
+                    "chance":100
+                },
+                {
+                    "id": "art_ace_a_rise_malachite",
+                    "additional": false,
+                    "chance":100
+                }
+            ]
+        },
+        {
+            "id": "art_ace_a_rise_mare",
+            "description": "我在林地找不到任何熟悉的身影。也许他们并未迷失。当我在井边俯身，影子如白霜铺满，此刻向上升腾，却未曾为我停留。当我再次看向井中，我看到自己灰白的面孔。我许诺不会将他们忘记。",
+            "warmup": 60,
+            "craftable": false,
+            "maxexecutions": 1,
+            "requirements": {
+                "art_ace_a_mare": 1,
+                "art_ace_b_pre": 1
+            },
+            "effects": {
+                "art_ace_b_mare": 1,
+                "art_ace_a_mare": -1,
+                "art_ace_b_pre": -1
+            }
+        },
+        {
+            "id": "art_ace_a_rise_malachite",
+            "description": "我在林地找不到任何熟悉的身影。也许他们并未迷失。当我在井边俯身，影子如白霜铺满，此刻向上升腾，却未曾为我停留。当我再次看向井中，我看到自己灰白的面孔。我许诺不会将他们忘记。",
+            "warmup": 60,
+            "craftable": false,
+            "maxexecutions": 1,
+            "requirements": {
+                "art_ace_a_malachite": 1,
+                "art_ace_b_pre": 1
+            },
+            "effects": {
+                "art_ace_b_malachite": 1,
+                "art_ace_a_malachite": -1,
+                "art_ace_b_pre": -1
+            }
+        }
+    ]
+}

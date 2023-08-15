@@ -1,0 +1,198 @@
+{
+    "elements": [
+        {
+            "id": "art_init_card",
+            "image": "art_init_card",
+            "label": "一趟归家车程",
+            "description": "我不该急着赶路，尽管夜色已深。",
+            "aspects": {
+                "job": 1
+            }
+        },
+        {
+            "id": "art_init_deer",
+            "image": "art_init_deer",
+            "label": "轧死的鹿",
+            "description": "它已停止呼吸。右侧鹿角断去半截，棕色皮毛毫发无损，我的灯光找不出血迹。也许它仍有用处，也许它能醒来。",
+            "aspects": {
+                "remnant": 1,
+                "art_aspect_item": 1,
+                "art_aspect_mask": 1
+                
+            }
+        },
+        {
+            "id": "art_init_deer_remain",
+            "image": "art_init_deer_remain",
+            "label": "鹿的残骸",
+            "description": "最引人注意的是头颅。我把它割下后再没有处理过，就放在橱柜上的塑料纸上。它正看着我。",
+            "aspects": {
+                "remnant": 1,
+                "art_aspect_mask": 1
+                
+            }
+        },
+        {
+            "id": "art_deer_remain",
+            "image": "art_deer_remain",
+            "label": "了无声息的残骸",
+            "description": "它不再解答我的疑问了。",
+            "aspects": {
+                "remnant": 1
+            }
+        },
+
+        {
+            "id": "art_init_job",
+            "image": "art_init_job",
+            "label": "一份剧院合约",
+            "description": "熟悉的剧目，熟悉的角色，不需要额外发挥。",
+            "aspects": {
+                "job": 1
+            }
+        },
+
+        {
+            "id": "art_job",
+            "image": "art_job",
+            "label": "一份剧院合约",
+            "description": "我用声音演出。我会一直唱下去，直到我的声音和生命一同被收回。",
+            "aspects": {
+                "job": 1
+            },
+            "xtriggers":{"job":"art_job_tired"},
+            "actionId": "work",
+            "lifetime": 120,
+            "decayTo": "art_job_decay",
+            "slots": [
+                {
+                  "id": "art_job_slot_a",
+                  "label": "额外的努力",
+                  "description": "首先需要我自身的能力。",
+                  "required": {
+                    "ability": 1,
+                    "memory": 1
+                  },
+                  "greedy": false
+                },
+                {
+                  "id": "art_job_slot_b",
+                  "label": "额外的付出",
+                  "description": "其次需要一些材料。",
+                  "required": {
+                    "ingredient": 1,
+                    "influence": 1
+                  },
+                  "greedy": false
+                },
+                {
+                    "id": "art_job_slot_c",
+                    "label": "额外的机遇",
+                    "description": "最后，如果我想真正做些什么，我需要一些异质的东西。[你必须为自己的行为承担风险。]",
+                    "required": {
+                      "art_aspect_show": 1,
+                      "reputation": 1
+                    },
+                    "greedy": false
+                  }
+              ]
+        },
+        {
+            "id": "art_job_tired",
+            "image": "art_job_tired",
+            "label": "一份剧院合约：歇息",
+            "description": "我并非连轴转的机器。",
+            "lifetime": 30,
+            "decayTo": "art_job"
+        },
+        {
+            "id": "art_job_decay",
+            "image": "art_job_decay",
+            "label": "剧院的冷落",
+            "description": "我怠慢了观众。这不是个好主意，但我仍有办法令他们不致厌烦。",
+            "aspects": {
+                "job": 1
+            }
+        },
+
+        {
+            "id": "art_ace_a_mat",
+            "label": "余温：鹿",
+            "description": "一个没有月光的夜晚，我看见了它，还是它的影子？",
+            "aspects": {
+                "art_aspect_show": 1
+            }
+        },
+        {
+            "id": "art_ace_a_pre",
+            "label": "余灰：鹿",
+            "description": "而我们已融为一体。",
+            "aspects": {
+                "way": 1,
+                "art_aspect_mask": 1
+            }
+        },
+        {
+            "id": "art_ace_b_mat",
+            "label": "余温：雪",
+            "description": "我确信许多人曾对我诉说。只有身死才能忆起那些语句。",
+            "aspects": {
+                "art_aspect_show": 1
+            }
+        },
+        {
+            "id": "art_ace_b_pre",
+            "label": "余灰：雪",
+            "description": "我试图在此地维持生者的身份。",
+            "aspects": {
+                "way": 1,
+                "art_aspect_mask": 1
+            }
+        },
+
+        {
+            "id": "art_ace_a_init",
+            "label": "诱惑：归乡",
+            "description": "我已选定了归宿。[此卡可通达“林地胜利”，只要将其升级到一定程度。以之“入梦”可以使之升级或转变。]",
+            "aspects": {
+                "way": 1
+            }
+        },
+        {
+            "id": "art_ace_a_mare",
+            "label": "诱惑：归乡",
+            "description": "我已选定了归宿。[此卡可通达“林地胜利”，只要将其升级到一定程度。以之“入梦”可以使之升级或转变。]",
+            "aspects": {
+                "desire": 1,
+                "art_aspect_mare": 1
+            }
+        },
+        {
+            "id": "art_ace_a_malachite",
+            "label": "诱惑：归乡",
+            "description": "我已选定了归宿。[此卡可通达“林地胜利”，只要将其升级到一定程度。以之“入梦”可以使之升级或转变。]",
+            "aspects": {
+                "desire": 1,
+                "art_aspect_malachite": 1
+            }
+        },
+        {
+            "id": "art_ace_b_mare",
+            "label": "追奉：归乡",
+            "description": "若我离去，我将不会被生者找见。[进一步升级此卡，追求“林地胜利”。在恰当的时节，林中牝马将予我指引。]",
+            "aspects": {
+                "desire": 2,
+                "art_aspect_mare": 2
+            }
+        },
+        {
+            "id": "art_ace_b_malachite",
+            "label": "追奉：归乡",
+            "description": "若我离去，我将不会被生者找见。[进一步升级此卡，追求“林地胜利”。在恰当的时节，环杉将予我指引。]",
+            "aspects": {
+                "desire": 2,
+                "art_aspect_malachite": 2
+            }
+        }
+    ]
+}

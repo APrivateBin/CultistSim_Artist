@@ -1,0 +1,60 @@
+{
+    "elements": [
+        {
+	        "id": "art_aspect_mask",
+	        "label": "面具",
+            "icon": "art_aspect_mask",
+	        "isAspect": true,
+	        "description": "另一副面孔。另一个我。"
+        },
+
+        {
+	        "id": "art_aspect_show",
+	        "label": "剧目",
+	        "isAspect": true,
+	        "description": "吊人胃口的故事。"
+        },
+
+        {
+	        "id": "art_aspect_item",
+	        "label": "林地的注视",
+	        "isAspect": true,
+	        "description": "也许是友人临行前的礼物。"
+        },
+
+        {
+	        "id": "art_aspect_person",
+	        "label": "召唤物？",
+	        "isAspect": true,
+	        "description": "此人本不属于这个世界？"
+        },
+
+        {
+	        "id": "art_aspect_mare",
+	        "label": "一个邀请",
+	        "isAspect": true,
+	        "description": "若我吞吃角色，角色也会将我吞吃。"
+        },
+
+        {
+	        "id": "art_aspect_malachite",
+	        "label": "一滴蜜糖",
+	        "isAspect": true,
+	        "description": "若我孕育角色，磨合的苦痛便是生育的苦痛。"
+        },
+
+        {
+	        "id": "art_aspect_rise",
+	        "label": "月明之时",
+	        "isAspect": true,
+	        "description": "我能清晰看到枝与叶的交叠。从未如此清晰过。"
+        },
+
+        {
+	        "id": "art_aspect_fall",
+	        "label": "月晦之时",
+	        "isAspect": true,
+	        "description": "也许云层过于厚重，让我看不清林中等待的来客。"
+        }
+    ]
+}

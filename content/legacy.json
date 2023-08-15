@@ -1,0 +1,17 @@
+{
+    "legacies": [
+        {
+            "id": "art_legacy",
+            "image": "art_legacy",
+            "label": "艺术家",
+            "description": "——他们是如此称呼，尽管某一重历史已幕落。该回到舞台上，让我不再是我了。",
+            "startdescription": "短暂的休假结束。我趁着夜晚回家，为新的一天做准备。",
+            "startingVerbId": "work",
+            "availableWithoutEndingMatch": true,
+            "newstart": true,
+            "effects": {
+                "art_init_card": 1
+            }
+        }
+    ]
+}
